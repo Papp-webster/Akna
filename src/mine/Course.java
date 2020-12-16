@@ -29,6 +29,12 @@ public class Course extends JPanel implements MouseListener {
 
     }
 
+
+    public void reveal(int rows, int column) {
+
+
+    }
+
     public void CountMines(int rows, int column) {
         if(!board[rows][column].isMine) return;
 
@@ -60,8 +66,12 @@ public class Course extends JPanel implements MouseListener {
                     board[row][col].setIcon(new ImageIcon("mine.png"));
 
 
+                }else if(board[row][col].count == 0){
+
+                    board[row][col].setEnabled(false);
+                } else {
+                    board[row][col].setText(board[row][col].getCount() + "");
                 }
-                board[row][col].setText(board[row][col].getCount() + "");
             }
         }
        repaint();
@@ -88,7 +98,7 @@ public class Course extends JPanel implements MouseListener {
 
         Mines();
         MineCount();
-        //ShowMines();
+        ShowMines(); //Megmutatja az aknákat és hogy mennyi akna van a közelben
         frame.setVisible(true);
 
 

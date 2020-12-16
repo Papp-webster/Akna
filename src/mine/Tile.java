@@ -7,11 +7,13 @@ public class Tile extends JButton{
     int rows,column; // A kocka poziciója
     int count;
     boolean isMine;
+    boolean clear;
 
 
     public Tile(int row, int column) {
         this.rows = row;
         this.column = column;
+        clear = false;
     }
 
     public int getRow() {
