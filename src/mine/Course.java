@@ -82,7 +82,7 @@ public class Course extends JPanel  {
 
     public Course() {
 
-        JFrame frame = new JFrame("Mine detector");
+        JFrame frame = new JFrame("Akanakereső");
         frame.setSize(600,550);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
