@@ -62,17 +62,17 @@ public class Course extends JPanel implements MouseListener {
      */
 
     public void ShowMines() {
-        for (int row = 0; row < board.length; row++) {
+        for (Tile[] tiles : board) {
             for (int col = 0; col < board[0].length; col++) {
-                if (board[row][col].isMine) {
-                    board[row][col].setIcon(new ImageIcon("mine.png"));
+                if (tiles[col].isMine) {
+                    tiles[col].setIcon(new ImageIcon("mine.png"));
 
 
-                }else if(board[row][col].count == 0){
+                } else if (tiles[col].count == 0) {
 
-                    board[row][col].setEnabled(false);
+                    tiles[col].setEnabled(false);
                 } else {
-                    board[row][col].setText(board[row][col].getCount() + "");
+                    tiles[col].setText(tiles[col].getCount() + "");
                 }
             }
         }
