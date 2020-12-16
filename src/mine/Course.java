@@ -2,10 +2,9 @@ package mine;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
 
-public class Course extends JPanel implements MouseListener {
+
+public class Course extends JPanel  {
 
     Tile[][] board = new Tile[8][10];
 
@@ -91,7 +90,6 @@ public class Course extends JPanel implements MouseListener {
         for (int row = 0; row < board.length; row++) {
             for (int col = 0; col < board[0].length; col++) {
                 Tile t= new Tile(row, col);
-                t.addMouseListener(this);
                 frame.add(t);
                 board[row][col] = t;
             }
@@ -107,35 +105,5 @@ public class Course extends JPanel implements MouseListener {
 
     }
 
-    @Override
-    public void mouseClicked(MouseEvent mouseEvent) {
-        if (mouseEvent.getButton()==1) {
-            Tile t = (Tile)(mouseEvent.getComponent());
-            t.setText("Jó");
-        } else if (mouseEvent.getButton() ==3){
-            Tile t = (Tile)(mouseEvent.getComponent());
-            t.setText(t.count + "");
 
-        }
-    }
-
-    @Override
-    public void mousePressed(MouseEvent mouseEvent) {
-
-    }
-
-    @Override
-    public void mouseReleased(MouseEvent mouseEvent) {
-
-    }
-
-    @Override
-    public void mouseEntered(MouseEvent mouseEvent) {
-
-    }
-
-    @Override
-    public void mouseExited(MouseEvent mouseEvent) {
-
-    }
 }
