@@ -3,8 +3,10 @@ import javax.swing.*;
 
 
 public class Tile extends JButton{
-    private int row,column; // A kocka poziciója
-    private int count;
+    boolean isMine;
+     int row,column; // A kocka poziciója
+     int count;
+
 
     public Tile(int row, int column) {
         this.row = row;
@@ -17,6 +19,22 @@ public class Tile extends JButton{
 
     public void setRow(int row) {
         this.row = row;
+    }
+
+    public int getCount() {
+        return count;
+    }
+
+    public void setCount(int count) {
+        this.count = count;
+    }
+
+    public boolean isMine() {
+        return isMine;
+    }
+
+    public void setMine(boolean mine) {
+        isMine = mine;
     }
 
     public int getColumn() {
