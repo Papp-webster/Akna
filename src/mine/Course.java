@@ -83,7 +83,7 @@ public class Course extends JPanel  {
     public Course() {
 
         JFrame frame = new JFrame("Aknakereső");
-        frame.setSize(600,550);
+        frame.setSize(800,600);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         frame.setLayout(new GridLayout(8,10));
