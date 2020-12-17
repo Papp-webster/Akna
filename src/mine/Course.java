@@ -10,7 +10,7 @@ public class Course extends JPanel  {
 
 
     /**
-     * Ez a methodus 10 bombát generál
+     * Ez a metodus 10 aknát generál
      */
     public void Mines() {
       int count = 0;
@@ -29,7 +29,7 @@ public class Course extends JPanel  {
     }
 
     /**
-     * Megszámolja a hány akna van a környéken
+     * Megszámolja a hány akna van a közelben
      */
 
 
@@ -40,7 +40,7 @@ public class Course extends JPanel  {
             for (int  columns = column - 1; columns <= column + 1; columns++){
                 try {
                     board[row][columns].count++;
-                }catch(Exception e) {
+                } catch(Exception e) {
                     //Semmit nem csínál ha túl lépi a határt.
                 }
         }
@@ -75,7 +75,7 @@ public class Course extends JPanel  {
                 }
             }
         }
-       repaint();
+       repaint(); // ez a metodus kitisztítja az előző ablakot és felülírja
 
     }
 
