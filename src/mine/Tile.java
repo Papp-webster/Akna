@@ -1,6 +1,7 @@
 package mine;
 import javax.swing.*;
 
+//@Author: Papp László
 
 public class Tile extends JButton{
 

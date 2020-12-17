@@ -3,6 +3,8 @@ package mine;
 import javax.swing.*;
 import java.awt.*;
 
+//@Author: Papp László
+
 
 public class Course extends JPanel  {
 
