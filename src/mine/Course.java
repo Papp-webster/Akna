@@ -79,7 +79,9 @@ public class Course extends JPanel  {
 
     }
 
-
+    /**
+     * Itt a pálya méretét beállítom és meghívom a metódusokat.
+     */
     public Course() {
 
         JFrame frame = new JFrame("Aknakereső");
@@ -89,7 +91,7 @@ public class Course extends JPanel  {
         frame.setLayout(new GridLayout(8,10));
         for (int row = 0; row < board.length; row++) {
             for (int col = 0; col < board[0].length; col++) {
-                Tile t= new Tile(row, col);
+                Tile t = new Tile(row, col);
                 frame.add(t);
                 board[row][col] = t;
             }
