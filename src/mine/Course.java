@@ -8,7 +8,6 @@ public class Course extends JPanel  {
 
     Tile[][] board = new Tile[8][10];
 
-
     /**
      * Ez a metodus 10 aknát generál
      */
@@ -87,8 +86,8 @@ public class Course extends JPanel  {
         JFrame frame = new JFrame("Aknakereső");
         frame.setSize(800,600);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
         frame.setLayout(new GridLayout(8,10));
+
         for (int row = 0; row < board.length; row++) {
             for (int col = 0; col < board[0].length; col++) {
                 Tile t = new Tile(row, col);
@@ -102,8 +101,6 @@ public class Course extends JPanel  {
         MineCount();
         ShowMines();
         frame.setVisible(true);
-
-
 
     }
 
