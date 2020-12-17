@@ -1,4 +1,4 @@
-package mine;
+package business_logic;
 
 import javax.swing.*;
 import java.awt.*;
