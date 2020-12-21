@@ -7,7 +7,7 @@ import business_logic.Course;
 public class Start {
 
     public static void main(String[] args) {
-        Course mineDetector = new Course();
+         new Course();
 
     }
 }
