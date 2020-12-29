@@ -2,6 +2,7 @@ package business_logic;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.logging.Logger;
 
 //@Author: Papp László
 
@@ -9,11 +10,13 @@ import java.awt.*;
 public class Course extends JPanel  {
 
     Tile[][] board = new Tile[8][10];
+    static final Logger naplo = AknaLogging.aknaLogger;
 
     /**
      * Ez a metodus 10 aknát generál
      */
     public void Mines() {
+        naplo.info("Aknák metódus");
       int count = 0;
       while(count < 10) {
           int row = (int)(Math.random()* board.length);
@@ -35,6 +38,7 @@ public class Course extends JPanel  {
 
 
     public void CountMines(int rows, int column) {
+        naplo.info("Aknát számoló metódus");
         if(!board[rows][column].isMine) return;
 
         for (int  row = rows - 1; row <= rows + 1; row++){
@@ -62,6 +66,7 @@ public class Course extends JPanel  {
      */
 
     public void ShowMines() {
+        naplo.info("Aknát megjelenítő metódus");
         for (Tile[] tiles : board) {
             for (int col = 0; col < board[0].length; col++) {
                 if (tiles[col].isMine) {
@@ -84,7 +89,7 @@ public class Course extends JPanel  {
      * Itt a pálya méretét beállítom és meghívom a metódusokat.
      */
     public Course() {
-
+        naplo.info("Pálya metódus");
         JFrame frame = new JFrame("Aknakereső");
         frame.setSize(800,600);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
